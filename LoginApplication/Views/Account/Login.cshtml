@@ -1,0 +1,31 @@
+﻿@model LoginApplication.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Login</h1>
+
+<div>
+    <div class="col-md-10">
+        <form method="post">
+            <div>
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Password">
+
+                </label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div>
+                <label>
+                   <button type="submit"  title="Login">Login</button>
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
