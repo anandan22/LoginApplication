@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LoginApplication.Models
 {
-    public class LoginViewModel
+    public class RegisterViewModel
     {
         [Required]
         [EmailAddress]
@@ -15,8 +15,11 @@ namespace LoginApplication.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [Display(Name = "Remember Me")]
-        public bool RememberMe { get; set; }
+
+        
+        [DataType(DataType.Password)]
+        [Compare("Password",ErrorMessage ="Password and confirmation password not match.")]
+        public string ConfirmPassword { get; set; }
 
 
 
