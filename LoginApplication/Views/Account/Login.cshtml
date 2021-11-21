@@ -23,8 +23,23 @@
             </div>
             <div>
                 <label>
-                   <button type="submit"  title="Login">Login</button>
+                    <button type="submit" title="Login">Login</button>
                 </label>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+                <input asp-for="RememberMe" type="checkbox" class="custom-control-input">
+                <label class="custom-control-label" asp-for="RememberMe">@Html.DisplayNameFor(m => m.RememberMe)</label>
+            </div>
+
+            <div>
+                <a asp-controller="Account" asp-action="Register">Register</a>
+            </div>
+            <div>
+
+                @Html.ActionLink("Register here", "Register", "Account");
+
+
             </div>
         </form>
     </div>
